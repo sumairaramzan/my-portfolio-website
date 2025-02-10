@@ -1,0 +1,556 @@
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+  }
+  
+  .main-content {
+    flex: 1; /* Pushes the footer to the bottom */
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+  }
+  
+  
+  .container {
+    max-width: 1200px;
+  }
+
+
+  .hover-underline-animation {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hover-underline-animation:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: all 0.3s ease-in-out;
+  }
+  .bg-gradient{
+    background: linear-gradient(85deg,#03115bcc 30%,#e80566e6);
+  }
+  .navbar{
+    background: linear-gradient(85deg,#03115bcc 30%,#e80566e6);
+  }
+  
+  .hover-underline-animation:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  
+  /* Profile Image */
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Skills Icons */
+  .skill-icons .icon {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .skill-icons .icon img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+  }
+  
+  .skill-icons .icon:hover img {
+    transform: scale(1.1);
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .hero-section {
+    height: 100vh;
+    background: url('background-image.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .hero-section h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .hero-section .intro-text {
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+
+  .about-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .about-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .hero {
+    background: linear-gradient(85deg,#03115bcc 30%,#e80566e6)!important;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  #home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Experience Section */
+.experience {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+  }
+  
+  /* Title styling */
+  .s_border {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  .spacer-half {
+    margin-top: 20px;
+  }
+  
+  .d_timeline {
+    list-style: none;
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+  
+  .d_timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 50px;
+  }
+  
+  .d_timeline-item:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #007bff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .d_timeline-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .d_timeline-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .d_title {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .d_company {
+    font-style: italic;
+    color: #777;
+  }
+  
+  .d_timeline-item p {
+    font-size: 1rem;
+    color: #444;
+  }
+  .dark-scheme .d_timeline-item {
+    border-left: 1px solid rgba(255, 255, 255, .2);
+}
+  
+  .d_timeline-item:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+  }
+  
+  /* Animation */
+  .wow {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .wow.fadeInUp {
+    animation: fadeInUp 1s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+  /* What I Do Section */
+.what-i-do {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+  }
+  
+  .what-i-do-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .what-i-do-subtitle {
+    font-size: 1.5rem;
+    color: #777;
+    margin-top: 20px;
+  }
+  
+  .what-i-do-text {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 30px;
+    line-height: 1.6;
+  }
+  
+  .what-i-do-services {
+    margin-top: 40px;
+  }
+  
+  .what-i-do-services ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .what-i-do-services li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .what-i-do-services li:hover {
+    color: #007bff;  /* Change color when hovering over a stack */
+  }
+  
+  .what-i-do-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container {
+    position: relative;
+    height: 400px;  /* Adjust height to suit your design */
+  }
+  
+  .what-i-do-image.image-change {
+    opacity: 1;
+  }
+  
+  /* Optional: Add a background image for each stack */
+  .what-i-do-services li {
+    transition: transform 0.3s ease;
+  }
+  
+  .what-i-do-services li:hover {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .what-i-do-title {
+      font-size: 2rem;
+    }
+  
+    .what-i-do-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .what-i-do-text {
+      font-size: 0.9rem;
+    }
+  
+    .what-i-do-services li {
+      font-size: 1rem;
+    }
+  
+    .what-i-do-image {
+      height: 200px;  /* Adjust height for smaller screens */
+    }
+  }
+
+
+  /* About Me Section */
+.about-me-section {
+    background: url('/images/about-me-bg.jpg') center center / cover no-repeat;  /* Optional background image */
+    color: #fff;
+    padding: 80px 0;
+  }
+  
+  .about-me-title {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  
+  .about-me-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #f4f4f4;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .about-me-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .about-me-img {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+ 
+
+  .about-me-img img {
+    width: 500px;  /* Set a fixed width */
+    height: 500px; /* Set a fixed height to make it a square */
+    object-fit: cover; /* This ensures the image covers the area without distorting */
+    border-radius: 50%; /* Make the image circular */
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .about-me-img img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-me-title {
+      font-size: 2.5rem;
+    }
+  
+    .about-me-subtitle {
+      font-size: 1.3rem;
+    }
+  
+    .about-me-description {
+      font-size: 0.9rem;
+    }
+  }
+
+
+  /* Ensure all cards take equal height */
+.card.h-100 {
+    height: 100%;
+  }
+  
+  /* Make card image height auto to adjust with aspect ratio */
+  .card-img-top {
+    object-fit: cover;  /* Ensure the image covers the space while maintaining aspect ratio */
+    height: 200px; /* Set a fixed height for the image */
+  }
+  
+  /* Ensure the button is always at the bottom of the card */
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-body .btn {
+    margin-top: auto;  /* Push the button to the bottom */
+  }
+/* Optional Custom Styles for the Contact Form */
+.contact .form-control {
+    border-radius: 10px;  /* Rounded corners */
+  }
+  
+  .contact .btn-primary {
+    border-radius: 10px;  /* Rounded button */
+    padding: 12px; /* Larger padding for a better touch area */
+  }
+  
+  .contact section {
+    background-color: #f7f7f7; /* Light grey background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  .contact h2 {
+    font-weight: 600;  /* Slightly bolder font for the heading */
+    color: #333;  /* Darker text color */
+  }
+
+  .expertise{
+    background: linear-gradient(85deg,#03115bcc 30%,#e80566e6)!important;
+    color: white;
+  }
+
+
+  .expertise-card {
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+  
+  .expertise-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .expertise-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .expertise-description {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+
+  .footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .footer .footer-link {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer .footer-link:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    color: #bbb;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .social-icon:hover {
+    color: #00acee; /* Twitter color, change as needed */
+    transform: translateY(-3px);
+  }
+  
+    
+  
+  
+  
+  
+  
