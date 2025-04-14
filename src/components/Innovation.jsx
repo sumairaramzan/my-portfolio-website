@@ -11,7 +11,7 @@ const Innovation = () => {
   };
 
   // Dynamically set the image source, with default image when no hover
-  const imageSrc = hoveredStack ? `/images/${hoveredStack}.jpg` : '/public/images/default.jpg';
+  const imageSrc = hoveredStack ? `/images/${hoveredStack}.jpg` : '/assets/images/default.jpg';
 
   return (
     <section id="what-i-do" className="what-i-do py-5">

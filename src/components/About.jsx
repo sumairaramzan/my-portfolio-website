@@ -1,4 +1,5 @@
 import React from 'react';
+import sumairaImg from '../assets/images/sumaira.jpeg';
 
 const About = () => {
   return (
@@ -8,7 +9,7 @@ const About = () => {
           {/* Left Side - Image */}
           <div className="col-lg-6 about-me-img">
             <img
-              src="/images/sumaira.jpeg"  // Your image here
+              src={sumairaImg}  // Your image here
               alt="About Me"
               className="img-fluid rounded-circle custom-image"
             />

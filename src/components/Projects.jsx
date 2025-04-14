@@ -1,5 +1,7 @@
 import React from "react";
-
+import remotepad from "../assets/images/remotepad.png"
+import teamup from "../assets/images/teamup.png"
+import doctor from "../assets/images/doctor365.png"
 const Projects = () => {
   return (
     <section id="projects" className="projects py-5">
@@ -9,7 +11,7 @@ const Projects = () => {
           <div className="col-md-4 mb-4">
             <div className="card h-100">
               <img
-                src="/public/images/remotepad.png"
+                src={remotepad}
                 className="card-img-top"
                 alt="Project 1"
               />
@@ -32,7 +34,7 @@ const Projects = () => {
           <div className="col-md-4 mb-4">
             <div className="card h-100">
               <img
-                src="/public/images/teamup.png"
+                src={teamup}
                 className="card-img-top"
                 alt="Project 2"
               />
@@ -57,7 +59,7 @@ const Projects = () => {
           <div className="col-md-4 mb-4">
             <div className="card h-100">
               <img
-                src="/public/images/doctor365.png"
+                src={doctor}
                 className="card-img-top"
                 alt="Project 3"
               />
