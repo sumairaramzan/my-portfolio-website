@@ -1,1 +1,0 @@
-import{j as e}from"./index-Dbq5awjz.js";const s=()=>e.jsx("div",{className:"d-flex justify-content-center align-items-center bg-light p-4 border rounded shadow-sm",children:e.jsx("h3",{className:"text-primary",children:"This is a Lazy Loaded Component!"})});export{s as default};
