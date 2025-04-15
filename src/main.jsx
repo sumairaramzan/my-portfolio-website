@@ -8,10 +8,10 @@ import { AuthProvider } from './AuthContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Router> {/* Wrap your App component with Router */}
+    <Router> 
     <AuthProvider>
         <App />
-    </AuthProvider>,
+    </AuthProvider>
     </Router>
   </StrictMode>
 );

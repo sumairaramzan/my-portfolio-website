@@ -75,7 +75,7 @@ const Projects = () => {
                   patients and doctors, streamlining communication, appointment
                   scheduling, and health management.
                 </p>
-                <a href="https://doctor365.ie/" className="btn btn-primary mt-auto">
+                <a href="https://doc-365.unsi.tech/" className="btn btn-primary mt-auto">
                   View Project
                 </a>
               </div>
