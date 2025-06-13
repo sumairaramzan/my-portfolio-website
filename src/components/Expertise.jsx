@@ -1,81 +1,101 @@
-import React from 'react';
-import "../App.css"
-import { FaDev, FaFigma, FaLaravel, FaPython, FaReact, FaWordpress } from 'react-icons/fa';
+import React, { useEffect } from 'react';
+import "../App.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import {
+  FaReact, FaHtml5, FaCss3Alt, FaBootstrap, FaSass, FaLaravel, FaNodeJs,
+  FaGitAlt, FaGithub, FaDatabase, FaKey, FaExchangeAlt
+} from 'react-icons/fa';
+
+import {
+  SiNextdotjs, SiJavascript, SiRedux, SiTailwindcss, SiMui, SiPhp,
+  SiExpress, SiMysql, SiMailchimp, SiJsonwebtokens
+} from 'react-icons/si';
 
 const Expertise = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+  }, []);
+
+  const sections = [
+    {
+      title: "Frontend Development",
+      skills: [
+        { icon: <FaHtml5 />, title: "HTML5", color: "text-danger" },
+        { icon: <FaCss3Alt />, title: "CSS3", color: "text-primary" },
+        { icon: <SiJavascript />, title: "JavaScript", color: "text-warning" },
+        { icon: <FaBootstrap />, title: "Bootstrap", color: "text-purple" },
+        { icon: <SiTailwindcss />, title: "Tailwind CSS", color: "text-info" },
+        { icon: <FaSass />, title: "SASS / SCSS", color: "text-pink" },
+        { icon: <SiMui />, title: "Material UI", color: "text-info" },
+        { icon: <FaReact />, title: "React.js", color: "text-cyan" },
+        { icon: <SiNextdotjs />, title: "Next.js", color: "text-dark" },
+        { icon: <SiRedux />, title: "Redux Toolkit", color: "text-purple-700" },
+      ]
+    },
+    {
+      title: "Backend Development",
+      skills: [
+        { icon: <FaLaravel />, title: "Laravel", color: "text-danger" },
+        { icon: <SiPhp />, title: "Core PHP", color: "text-primary" },
+        { icon: <FaNodeJs />, title: "Node.js", color: "text-success" },
+        { icon: <SiExpress />, title: "Express.js", color: "text-dark" },
+      ]
+    },
+    {
+      title: "APIs & Integrations",
+      skills: [
+        { icon: <SiJsonwebtokens />, title: "JWT Auth", color: "text-warning" },
+        { icon: <FaKey />, title: "OAuth", color: "text-primary" },
+        { icon: <FaExchangeAlt />, title: "WebSocket", color: "text-info" },
+        { icon: <SiMailchimp />, title: "Mailchimp", color: "text-danger" },
+      ]
+    },
+    {
+      title: "Version Control & Tools",
+      skills: [
+        { icon: <FaGitAlt />, title: "Git", color: "text-orange" },
+        { icon: <FaGithub />, title: "GitHub", color: "text-dark" },
+      ]
+    },
+    {
+      title: "Databases",
+      skills: [
+        { icon: <FaDatabase />, title: "MySQL", color: "text-secondary" },
+      ]
+    }
+  ];
+
   return (
-    <section id="expertise" className="expertise py-5">
+    <section id="expertise" className="expertise py-5 bg-light">
       <div className="container">
-        <h2 className="text-center mb-4">My Expertise</h2>
-        <div className="row">
-          {/* Expertise Item 1 */}
-          <div className="col-md-4 mb-4">
-            <div className="expertise-card text-center p-4 border rounded">
-              <FaReact size={50} className="mb-3" />
-              <h5 className="expertise-title">React.js</h5>
-              <p className="expertise-description">
-                I specialize in creating dynamic and responsive web applications using React.js. I focus on performance optimization, reusable components, and scalable architectures.
-              </p>
+        <h2 className="text-center mb-5 display-5 fw-bold">My Expertise</h2>
+        {sections.map((section, index) => (
+          <div key={index} className="mb-5">
+            <h4 className="mb-4">{section.title}</h4>
+            <div className="row justify-content-center">
+              {section.skills.map((item, i) => (
+                <div
+                  key={i}
+                  className="col-lg-2 col-md-3 col-sm-4 col-6 text-center mb-4"
+                  data-aos="zoom-in"
+                >
+                  <div
+                    className={`skill-icon ${item.color}`}
+                    style={{
+                      fontSize: "2.5rem",
+                      transition: "transform 0.3s",
+                    }}
+                  >
+                    {item.icon}
+                  </div>
+                  <p className="mt-2">{item.title}</p>
+                </div>
+              ))}
             </div>
           </div>
-
-          {/* Expertise Item 2 */}
-          <div className="col-md-4 mb-4">
-            <div className="expertise-card text-center p-4 border rounded">
-              <FaLaravel size={50} className="mb-3" />
-              <h5 className="expertise-title">Laravel Development</h5>
-              <p className="expertise-description">
-                Expertise in building robust backend solutions with Laravel. From API integrations to database management, I create secure, high-performance systems.
-              </p>
-            </div>
-          </div>
-
-          {/* Expertise Item 3 */}
-          <div className="col-md-4 mb-4">
-            <div className="expertise-card text-center p-4 border rounded">
-              <FaWordpress size={50} className="mb-3" />
-              <h5 className="expertise-title">WordPress Development</h5>
-              <p className="expertise-description">
-                Extensive experience in creating customized WordPress websites, themes, and plugins. I bring both design and functionality together for a seamless experience.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="row">
-          {/* Expertise Item 4 */}
-          <div className="col-md-4 mb-4">
-            <div className="expertise-card text-center p-4 border rounded">
-              <FaPython size={50} className="mb-3" />
-              <h5 className="expertise-title">Python</h5>
-              <p className="expertise-description">
-                Experience in building Python-based web applications and automation scripts. I enjoy solving complex problems and building scalable applications.
-              </p>
-            </div>
-          </div>
-
-          {/* Expertise Item 5 */}
-          <div className="col-md-4 mb-4">
-            <div className="expertise-card text-center p-4 border rounded">
-              <FaDev size={50} className="mb-3" />
-              <h5 className="expertise-title">DevOps</h5>
-              <p className="expertise-description">
-                I have worked extensively with cloud technologies, CI/CD pipelines, containerization, and DevOps automation to streamline software development and deployment processes.
-              </p>
-            </div>
-          </div>
-
-          {/* Expertise Item 6 */}
-          <div className="col-md-4 mb-4">
-            <div className="expertise-card text-center p-4 border rounded">
-              <FaFigma size={50} className="mb-3" />
-              <h5 className="expertise-title">Figma Design</h5>
-              <p className="expertise-description">
-                Designing user-friendly UI/UX with Figma. I collaborate with teams to ensure designs are both aesthetically pleasing and functional.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

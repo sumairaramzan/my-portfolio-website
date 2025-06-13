@@ -1,46 +1,62 @@
-import React from 'react';
-import '../App.css'; // Import custom CSS for styling
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import '../App.css';
+
+const experiences = [
+  {
+    icon: '💡',
+    date: 'Jan 2024 – Present',
+    title: 'MERN Stack Developer',
+    company: 'Idevo Solutions',
+    description:
+      'Working on full-stack apps using React.js, Node.js, Express, MongoDB & MySQL. Collaborating with teams to deliver powerful solutions.',
+  },
+  {
+    icon: '🛠️',
+    date: 'Mar 2024 – Dec 2024',
+    title: 'React.js Developer / Software Engineer',
+    company: 'BitsclanITSolutions',
+    description:
+      'Built dynamic UIs, worked closely with designers, wrote reusable components, and boosted performance using modern tools.',
+  },
+  {
+    icon: '🎯',
+    date: 'Feb 2023 – Jan 2024',
+    title: 'Frontend Developer',
+    company: 'Software Alliance',
+    description:
+      'Developed engaging, responsive websites using HTML, CSS, JS. Ensured cross-browser support and high performance.',
+  },
+];
 
 const Experience = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <section id="experience" className="experience py-5">
+    <section id="experience" className="expertise py-5">
       <div className="container">
-        <h4 className="s_border text-center">My Experiences</h4>
-        <div className="spacer-half"></div>
-
-        <ul className="d_timeline">
-          {/* Experience 1 */}
-          <li className="d_timeline-item">
-            <h3 className="d_timeline-title">Dec 2024 - Present</h3>
-            <p className="d_timeline-text">
-              <span className="d_title">Full Stack Developer</span>
-              <span className="d_company">UNSI Tech</span>
-              As a Full Stack Developer at UNSI Tech, I work on designing and developing end-to-end web applications using the latest technologies like React.js, Node.js, and Laravel. I collaborate closely with cross-functional teams to deliver high-quality software solutions that meet client needs and expectations.
-            </p>
-          </li>
-
-          {/* Experience 2 */}
-          <li className="d_timeline-item">
-            <h3 className="d_timeline-title">Oct 2023 - Oct 2024</h3>
-            <p className="d_timeline-text">
-              <span className="d_title">React.js Developer / Software Engineer</span>
-              <span className="d_company">BitsclanITSolutions</span>
-              As a React.js Developer at BitsclanITSolutions, I was responsible for building dynamic and responsive user interfaces. My role involved collaborating with designers to ensure a seamless user experience, developing reusable components, and optimizing application performance using React.js and modern frontend development tools.
-            </p>
-          </li>
-
-          {/* Experience 3 */}
-          <li className="d_timeline-item">
-            <h3 className="d_timeline-title">Oct 2022 - Oct 2023</h3>
-            <p className="d_timeline-text">
-              <span className="d_title">Frontend Developer</span>
-              <span className="d_company">Software Alliance</span>
-              As a Frontend Developer at Software Alliance, I focused on creating intuitive and responsive web applications. My work primarily involved HTML, CSS, JavaScript, and modern frameworks to create interactive, user-friendly websites that adhered to best practices for performance and accessibility.
-            </p>
-          </li>
-
-          {/* Additional experiences can follow the same structure */}
-        </ul>
+        <h2 className="text-center mb-5 section-title" data-aos="fade-down">📌 My Experience Timeline</h2>
+        <div className="timeline">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="timeline-item"
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
+            >
+              <div className="timeline-icon">{exp.icon}</div>
+              <div className="timeline-content">
+                <h5 className="text-primary">{exp.date}</h5>
+                <h4 className="fw-bold">{exp.title}</h4>
+                <h6 className="text-secondary mb-2">{exp.company}</h6>
+                <p className="text-muted">{exp.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
