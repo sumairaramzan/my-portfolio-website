@@ -1,5 +1,5 @@
 import React from 'react';
-import sumairaImg from '../assets/images/sumaira.jpeg';
+import sumairaImg from '../assets/images/WhatsApp.jpg';
 
 const About = () => {
   return (
