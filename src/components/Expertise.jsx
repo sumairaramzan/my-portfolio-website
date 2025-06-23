@@ -68,7 +68,7 @@ const Expertise = () => {
   ];
 
   return (
-    <section id="expertise" className="expertise py-5 bg-light">
+    <section  className="expertise py-5 bg-light">
       <div className="container">
         <h2 className="text-center mb-5 display-5 fw-bold">My Expertise</h2>
         {sections.map((section, index) => (
@@ -83,6 +83,7 @@ const Expertise = () => {
                 >
                   <div
                     className={`skill-icon ${item.color}`}
+                    id='expertise'
                     style={{
                       fontSize: "2.5rem",
                       transition: "transform 0.3s",

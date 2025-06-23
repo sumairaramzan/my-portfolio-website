@@ -8,6 +8,7 @@ const experiences = [
     icon: '💡',
     date: 'Jan 2024 – Present',
     title: 'MERN Stack Developer',
+    link: 'https://idevosolution.com/',
     company: 'Idevo Solutions',
     description:
       'Working on full-stack apps using React.js, Node.js, Express, MongoDB & MySQL. Collaborating with teams to deliver powerful solutions.',
@@ -16,6 +17,7 @@ const experiences = [
     icon: '🛠️',
     date: 'Mar 2024 – Dec 2024',
     title: 'React.js Developer / Software Engineer',
+    link: 'https://bitsclan.com/life-at-bitsclan', 
     company: 'BitsclanITSolutions',
     description:
       'Built dynamic UIs, worked closely with designers, wrote reusable components, and boosted performance using modern tools.',
@@ -25,6 +27,7 @@ const experiences = [
     date: 'Feb 2023 – Jan 2024',
     title: 'Frontend Developer',
     company: 'Software Alliance',
+    link: 'https://www.softwarealliance.io/', 
     description:
       'Developed engaging, responsive websites using HTML, CSS, JS. Ensured cross-browser support and high performance.',
   },
@@ -36,10 +39,10 @@ const Experience = () => {
   }, []);
 
   return (
-    <section id="experience" className="expertise py-5">
+    <section className="expertise py-5">
       <div className="container">
         <h2 className="text-center mb-5 section-title" data-aos="fade-down">📌 My Experience Timeline</h2>
-        <div className="timeline">
+        <div className="timeline" id='experience'>
           {experiences.map((exp, index) => (
             <div
               key={index}
@@ -50,8 +53,17 @@ const Experience = () => {
               <div className="timeline-icon">{exp.icon}</div>
               <div className="timeline-content">
                 <h5 className="text-primary">{exp.date}</h5>
-                <h4 className="fw-bold">{exp.title}</h4>
-                <h6 className="text-secondary mb-2">{exp.company}</h6>
+                <h4 className="fw-bold text-dark">{exp.title}</h4>
+                <h6 className="text-secondary mb-2">
+  <a
+    href={exp.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-decoration-none text-secondary"
+  >
+    {exp.company}
+  </a>
+</h6>
                 <p className="text-muted">{exp.description}</p>
               </div>
             </div>
