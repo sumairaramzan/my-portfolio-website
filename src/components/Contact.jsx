@@ -17,7 +17,7 @@ const Contact = () => {
         <h2 className="text-center fw-bold mb-5" data-aos="fade-down">
           📞 Let's Connect
         </h2>
-        <div className="row g-4 align-items-stretch">
+        <div className="row g-4 align-items-stretch flex-wrap">
           {/* Contact Form */}
           <div className="col-lg-6 d-flex" data-aos="fade-right">
             <div className="glass-card p-5 rounded-4 shadow w-100 d-flex flex-column justify-content-between">
@@ -75,15 +75,18 @@ const Contact = () => {
 
         {/* Optional Map */}
         <div className="row mt-5" data-aos="fade-up">
-          <div className="col-12">
-            <iframe
-              title="Google Map"
-              src="https://maps.google.com/maps?q=Lahore,%20Pakistan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              style={{ border: 0, width: '100%', height: '300px', borderRadius: '16px' }}
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
+        <div className="col-12">
+  <div className="ratio ratio-16x9 rounded overflow-hidden">
+    <iframe
+      title="Google Map"
+      src="https://maps.google.com/maps?q=Lahore,%20Pakistan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>
+
         </div>
       </div>
     </section>
